@@ -1,6 +1,8 @@
-\documentclass[10pt]{article}
+\documentclass[a4paper,10pt] {article}
+\usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[italian]{babel}
 \usepackage[font=small,labelfont=bf]{caption}
 \title{Summary-SWE}
 \author{carlo Sindico}
@@ -81,35 +83,34 @@ Carlo Sindico% Your name
 \section{Lezione 1 Introduzione al corso}
 
 \begin{itemize}
-\item Il software, se utile, ha vita lunga. Il ruolo di un informatico \'e "al
-controno della programmazione", in modo da non produrre codice usa e getta; deve
+\item Il software, se utile, ha vita lunga. Il ruolo di un informatico è ``al
+contorno della programmazione'', in modo da non produrre codice usa e getta; deve
 \textbf{eseguire un processo di manutenzione del software e del codice.} Tutte le
 attivit\'a hanno un costo e non possono essere buttate al vento.
 
-\item \textbf{Engineering}, ingegnere, scienziato; l'ingegnere \'e colui che dai
-principi scientifici ne trae una finalit\'a concreta, pratica. La scienza deve
-scoprire questi principi, prepararli. Crea qualcosa che sia mantenibile nel tempo.
-(piramidi, ponti, statue)
-\item \textbf{Software}, \'e un terreno molto giovane, nato durante la seconda
-guerra mondiale. Il SWE molto dopo, non \'e un ramo della computer science, ma
-\'e \textbf{una disciplina ingegneristica che mette insieme elementi e
+\item \textbf{Engineering}, ingegnere, scienziato; l'ingegnere è colui che dai
+principi scientifici ne trae una finalità concreta, pratica. La scienza deve
+scoprire questi principi, prepararli. Crea qualcosa che sia mantenibile nel tempo
+(piramidi, ponti, statue).
+\item \textbf{Software}, è un terreno molto giovane, nato durante la seconda
+guerra mondiale. Il SWE molto dopo, non è un ramo della computer science, ma
+è \textbf{una disciplina ingegneristica che mette insieme elementi e
 conoscenze.}
-\item \textbf{In assenza di principi ingegneristici, aim\'e si fanno solo "dei
+\item \textbf{In assenza di principi ingegneristici, aimè si fanno solo "dei
 pasticci"}. Molte conoscenze vengono da campi che non sono l'informatica:
 		\begin{itemize}
 \item Informatica, si vuole che un buon ingegnere del software conosca tutte le
 competenze informatiche;
 		\item Matematica, scienza di base che aiuta a risolvere problemi;
-\item Scienze gestionali ed economia, \'e un attivit\'a di gruppo, correlazionale,
+\item Scienze gestionali ed economia, è un attività di gruppo, correlazionale,
 capire come gestire risorse,
 		tempo, denaro, cogestire;
-		\item Ingegneria, \'e un pezzo di un sistema complesso che passa informazioni.
-\item Psicologia, il software \'e rilasciato con interfacce molto orientate alle
-persone, bisogna intercettare le aspet-
-		tative di chi usa il software.
+		\item Ingegneria, è un pezzo di un sistema complesso che passa informazioni.
+		\item Psicologia, il software è rilasciato con interfacce molto orientate alle
+persone, bisogna intercettare le aspettative di chi usa il software.
 		\end{itemize}
 
-\item \textbf{Ciclio di vita di un software}, per regola il software nasce e ha
+\item \textbf{Ciclo di vita di un software}, per regola il software nasce e ha
 una vita che termina con il ritiro. Dal momento
 in cui nasce esso passa in diversi stati, che lo fanno transire. Il software
 spende la maggior parte del suo tempo
@@ -118,23 +119,23 @@ e cambiare lo stato. Noi
 vorremmo una manutenzione che sia il meno invasiva possibile.
 	\item Esistono svariate forme di manutenzione:
 	\begin{itemize}
-		\item \textbf{Corretiva}, per correggere difetti eventualmente rilevati
+		\item \textbf{Correttiva}, per correggere difetti eventualmente rilevati
 		\item \textbf{Adattiva}, per adattare il sistema alla variazione dei requisiti
-		\item \textbf{Evolutiva}, per aggiungere funzionalit\'a al sistema	
+		\item \textbf{Evolutiva}, per aggiungere funzionalità al sistema	
 
-\item \textbf{NOTA: il software muore quando non c\'e pi\'u nessuna manutenzione
+\item \textbf{NOTA: il software muore quando non c'è più nessuna manutenzione
 da
-nessun developer o da nessuna comunit\'a - utenza.}
+nessun developer o da nessuna comunità - utenza.}
 	\end{itemize}
 
-\item \textbf{Efficienza}, quante risorse ho impiegato per fare ci\'o che ho
+\item \textbf{Efficienza}, quante risorse ho impiegato per fare ciò che ho
 richiesto; misura il consumo e cresce al diminuire
-del consumo. La massima efficienza \'e il consumo zero, quindi da sola non basta.
+del consumo. La massima efficienza è il consumo zero, quindi da sola non basta.
 Le risorse che si consumano
 sono persone, tempo, denaro, materiale.
 
-\item \textbf{Efficacia}, \'e una misura della conformit\'a, il raggiungere
-l'obiettivo atteso. Si \'e efficaci se si raggiunge con
+\item \textbf{Efficacia}, è una misura della conformità, il raggiungere
+l'obiettivo atteso. Si è efficaci se si raggiunge con
 rapidit\'a l'obiettivo; non misura le risorse. Bisogna cercare l'ottimo tra
 efficienza ed efficacia, trovare il massimo equilibrio, massimizzare gli obiettivi
 che sono tra l'efficienza e l'efficacia. Questi due termini sono in contrasto tra
@@ -142,7 +143,7 @@ loro.
 
 \item\textbf{Progetto, assignment (incarico)}, sono progetti, un incarico
 contrattualizzato fra parti
-e non pi\'u negoziabile, mentre tutto il resto \'e negoziabile. Verr\'a
+e non più negoziabile, mentre tutto il resto è negoziabile. Verrà
 enfatizzato molto l'aspetto
 contrattuale. Assignment + commitment (impegno inderogabile); il lavoro viene dati
 da un assignement
@@ -154,8 +155,7 @@ falliscono clamorosamente, per un sacco di motivi che il swe dovrebbe cercare al
 radice. Il progetto
 potrebbe essere obsoleto dalla nascita, incapacit\'a di chi ha l'impegno, oppure
 esaurimento di tempo
-e/o finanziamenti.
-
+e/o finanziamenti.
 In questo caso vogliamo imparare come si fa a non fallire, a soddisfare gli
 obiettivi entro i tempi e i costi
 noti a priori. Quante ore produttive mi servono e in quante ore di calendario
@@ -165,9 +165,9 @@ ingegneristici. Per imbarcarsi in
 un progetto devo sapere che ce la posso fare.
 
 \item \textbf{Best practice}, il miglior modo di fare le cose, la selezione di
-ci\'o che \'e meglio fare in una certa professione.
+ci\'o che \'e meglio fare in una certa professione. è
 
-\item \textbf{Stakeholder}, \'e una persona che conta, un portatore di interesse,
+\item \textbf{Stakeholder}, \'e una èè persona che conta, un portatore di interesse,
 che ha influenza sul prodotto o sul processo.
 
 \item DEFINIZIONE DI INGEGNERIA DEL SOFTWARE:
@@ -268,7 +268,7 @@ in fase di sviluppo.
 	aderire al 100\% alla progettazione. Nella
 	realizzazione attuo, ma non sono ancora sicuro che il risultato soddisfi il
 	cliente
-				\item \underline{Verica e validazione}
+				\item \underline{Verifica e validazione}
 	\item \underline{Manutenzione}, per la maggior parte della sua vita il 
 	prodotto
 	resta in manutenzione. Non esiste vita
