@@ -1,0 +1,578 @@
+\documentclass[10pt]{article}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[font=small,labelfont=bf]{caption}
+\title{Summary-SWE}
+\author{carlo Sindico}
+\begin{document}
+\pagenumbering{arabic}
+
+
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the
+
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Universit\`a degli Studi di Padova}\\[1.5cm] % Name of your
+
+\textsc{\Large Laurea in Informatica}\\[0.5cm] % Major heading such as course name\textsc{\large Corso di Ingegneria del Software}\\[0.5cm] % Minor heading such as
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge  Riassunto di fine corso}\\[0.3cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Studente:}\\
+Carlo Sindico% Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Matricola:}
+\textsc{1069322} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[4cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the
+
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large 18/02/2017}\\[3cm] % Date, change the \today to a set date if you want to
+
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will
+
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+
+\section{Lezione 1 Introduzione al corso}
+
+\begin{itemize}
+\item Il software, se utile, ha vita lunga. Il ruolo di un informatico \'e "al
+controno della programmazione", in modo da non produrre codice usa e getta; deve
+\textbf{eseguire un processo di manutenzione del software e del codice.} Tutte le
+attivit\'a hanno un costo e non possono essere buttate al vento.
+
+\item \textbf{Engineering}, ingegnere, scienziato; l'ingegnere \'e colui che dai
+principi scientifici ne trae una finalit\'a concreta, pratica. La scienza deve
+scoprire questi principi, prepararli. Crea qualcosa che sia mantenibile nel tempo.
+(piramidi, ponti, statue)
+\item \textbf{Software}, \'e un terreno molto giovane, nato durante la seconda
+guerra mondiale. Il SWE molto dopo, non \'e un ramo della computer science, ma
+\'e \textbf{una disciplina ingegneristica che mette insieme elementi e
+conoscenze.}
+\item \textbf{In assenza di principi ingegneristici, aim\'e si fanno solo "dei
+pasticci"}. Molte conoscenze vengono da campi che non sono l'informatica:
+		\begin{itemize}
+\item Informatica, si vuole che un buon ingegnere del software conosca tutte le
+competenze informatiche;
+		\item Matematica, scienza di base che aiuta a risolvere problemi;
+\item Scienze gestionali ed economia, \'e un attivit\'a di gruppo, correlazionale,
+capire come gestire risorse,
+		tempo, denaro, cogestire;
+		\item Ingegneria, \'e un pezzo di un sistema complesso che passa informazioni.
+\item Psicologia, il software \'e rilasciato con interfacce molto orientate alle
+persone, bisogna intercettare le aspet-
+		tative di chi usa il software.
+		\end{itemize}
+
+\item \textbf{Ciclio di vita di un software}, per regola il software nasce e ha
+una vita che termina con il ritiro. Dal momento
+in cui nasce esso passa in diversi stati, che lo fanno transire. Il software
+spende la maggior parte del suo tempo
+in uno stato che si chiama manutenzione, in cui si possono correggere degli errori
+e cambiare lo stato. Noi
+vorremmo una manutenzione che sia il meno invasiva possibile.
+	\item Esistono svariate forme di manutenzione:
+	\begin{itemize}
+		\item \textbf{Corretiva}, per correggere difetti eventualmente rilevati
+		\item \textbf{Adattiva}, per adattare il sistema alla variazione dei requisiti
+		\item \textbf{Evolutiva}, per aggiungere funzionalit\'a al sistema	
+
+\item \textbf{NOTA: il software muore quando non c\'e pi\'u nessuna manutenzione
+da
+nessun developer o da nessuna comunit\'a - utenza.}
+	\end{itemize}
+
+\item \textbf{Efficienza}, quante risorse ho impiegato per fare ci\'o che ho
+richiesto; misura il consumo e cresce al diminuire
+del consumo. La massima efficienza \'e il consumo zero, quindi da sola non basta.
+Le risorse che si consumano
+sono persone, tempo, denaro, materiale.
+
+\item \textbf{Efficacia}, \'e una misura della conformit\'a, il raggiungere
+l'obiettivo atteso. Si \'e efficaci se si raggiunge con
+rapidit\'a l'obiettivo; non misura le risorse. Bisogna cercare l'ottimo tra
+efficienza ed efficacia, trovare il massimo equilibrio, massimizzare gli obiettivi
+che sono tra l'efficienza e l'efficacia. Questi due termini sono in contrasto tra
+loro.
+
+\item\textbf{Progetto, assignment (incarico)}, sono progetti, un incarico
+contrattualizzato fra parti
+e non pi\'u negoziabile, mentre tutto il resto \'e negoziabile. Verr\'a
+enfatizzato molto l'aspetto
+contrattuale. Assignment + commitment (impegno inderogabile); il lavoro viene dati
+da un assignement
+e trasformato in commitment.
+
+\item \textbf{Engagement}, essere impegnati formalmente, impegno dal quale non si
+pu\'o fallire. A volte i progetti
+falliscono clamorosamente, per un sacco di motivi che il swe dovrebbe cercare alla
+radice. Il progetto
+potrebbe essere obsoleto dalla nascita, incapacit\'a di chi ha l'impegno, oppure
+esaurimento di tempo
+e/o finanziamenti.
+
+In questo caso vogliamo imparare come si fa a non fallire, a soddisfare gli
+obiettivi entro i tempi e i costi
+noti a priori. Quante ore produttive mi servono e in quante ore di calendario
+posso soddisfare determinati
+obiettivi (a prescindere dalle persone). Per fare ci\'o devo applicare principi
+ingegneristici. Per imbarcarsi in
+un progetto devo sapere che ce la posso fare.
+
+\item \textbf{Best practice}, il miglior modo di fare le cose, la selezione di
+ci\'o che \'e meglio fare in una certa professione.
+
+\item \textbf{Stakeholder}, \'e una persona che conta, un portatore di interesse,
+che ha influenza sul prodotto o sul processo.
+
+\item DEFINIZIONE DI INGEGNERIA DEL SOFTWARE:
+
+\item \textbf{approccio sistematico, disciplinato e quanti cabile allo sviluppo,
+uso, manutenzione e ritiro del software.}
+	\begin{itemize}
+\item \textbf{Sistematico}, agisco secondo un sistema, affronto il medesimo
+problema sempre nello stesso modo (nel modo
+		giusto);senza adottare approcci improvvisati o creativi.
+
+\item \textbf{Disciplinato}, ciascuno fa il suo e nessuno fallisce, perch\'e il
+software engineering \'e un'attivit\'a collaborativa. Seguire in modo
+		rigoroso la disciplina \'e nostro dovere, e  produce affdabilit\'a.
+
+\item \textbf{Quantificabile}, esprimere una quantit\'a; se si \' sistematici e
+disciplinati, si pu\'o calcolare a priori quanto tempo \'e necessario per
+svolgere quella determinata cosa. Si pu\'o essere quanti cabili solo se si \'e
+sistematici e disciplinati.
+	\end{itemize}
+
+\item Si cerca un approccio con queste caratteristiche (4P):
+
+\item  \textbf{People}, insieme delle persone che commissionano e ricevono;
+\item \textbf{Product}, il software e' parte di un sistema complesso;
+\item \textbf{Process}, l'insieme di attivit\'a che svolgiamo ad un particolare
+stato;
+\item \textbf{Project}, attivit\'a specifi che svolte a fronte di un assignment
+che diventa un commitment.
+
+\item Tre strati:
+
+\item \textbf{Customer}, il cliente, quello che ha un bisogno espresso o
+inespresso;
+\item \textbf{Solution}, dove esiste il customer c\'e qualcuno che trova una
+soluzione, fatta di requisiti (di cosa c\'e
+bisogno);
+\item \textbf{Endeavor}, l'impegno per realizzare il software, il team interagisce
+con gli stakeholder; il software engineering \'e un'attivit\'a
+strettamente collaborativa, ho bisogno di un metodo di lavoro per il team. Way of
+working.
+
+SWE != PROGRAMMING, la programmazione \'e solo un elemento, e anche il meno
+importante. Il
+programmatore deve fare solo quello che viene chiesto (da un membro del team
+stesso). Il programmatore
+deve obbedire, non pu\'o essere creativo.
+
+
+\item Principi etici:
+\item \textbf{Considerare la qualit\'a come primo obiettivo}
+\item \textbf{Produrre sw di qualit\'a \'e possibile}
+\item \textbf{Aiutare il cliente a comprendere i suoi veri bisogni}
+\item \textbf{Adottare i processi pi\'u adatti al progetto}
+\item \textbf{Ridurre la distanza intellettuale tra il software e il problema da
+risolvere}
+\item \textbf{Essere proattivi nel cercare e rimuovere gli errori}
+\item \textbf{Motivare, formare, far crescere le persone}
+
+\end {itemize}
+
+
+\section{Lezione 2 Processi Software}
+\begin{itemize}
+\item La tecnologia evolve ad una velocit\'a incontrollabile diventa obsoleta
+rapidamente. \'e necessario capire la differenza tra le cose essenziali e le cose
+aaccidentali. Tra le cose essenziali vi \'e la disciplina, mentre tra le cose
+accidentali vi  \'e la tecnica e gli strumenti. \'e importante concentrarsi sugli
+aspetti fondamentali e non accidentali. Occorre avere capacit\'a di impegno
+concettuale, astrazione, di analisi e rigore (best practice). Vogliamo utilizzare
+la traccia di chi ha fatto le cose in passato e le a fatte bene. Nessuno scopo
+pu\'o essere raggiunto senza impegno.
+
+
+\item \textbf{Progetto didattico}, ci sono due approcci ed uno spazio intermedio.
+Come si pu\'o notare dal grafico, le \textbf{skills} (competenze) servono per
+affrontare \textbf{challenges} sempre pi\'u alte.
+
+\item \textbf{Cosa non \'e un progetto}, aggregare informazioni e attivit\'a e
+processi per ottenere un prodotto che sembra funzionale, ma non \'e il "basta
+che respiri", bisogna sostituire il principio di "by correction", con il principio
+di "by construction" (costruire sapendo che funzioner\'a). Niente correzioni
+in fase di sviluppo.
+
+\item \textbf{Cosa \'e un progetto}:
+	\begin{itemize}
+	\item \underline{Pianificazione}, pianfica chi sa cosa vuole fare, \'e 
+	l'essenza
+	per controllarsi, per sapere se stiamo
+		convergendo o divergendo. Ogni attivit\'a inizia con la pianifcazione
+	\item \underline{Analisi dei requisiti}: si analizza ci\'o di cui si ha 
+	bisogno.
+	L'analisi ha un'importanza decisiva, bisogna
+				capire il problema
+				\item \underline{Progettazione}, si decide la forma della 
+				soluzione
+	\item \underline{Realizzazione}, dove sta anche la programmazione, che deve
+	aderire al 100\% alla progettazione. Nella
+	realizzazione attuo, ma non sono ancora sicuro che il risultato soddisfi il
+	cliente
+				\item \underline{Verica e validazione}
+	\item \underline{Manutenzione}, per la maggior parte della sua vita il 
+	prodotto
+	resta in manutenzione. Non esiste vita
+	operativa senza manutenzione, non esiste software perfetto quindi esso deve 
+	essere
+	mantenuto.
+	\item \underline{Qualit\'a}, uno dei principi su cui punteremo, perch\'e la 
+	qualit\'a \'e
+	possibile. Vorremmo quantificare la	qualit\'a in modo oggettivo.
+	\end{itemize}
+	
+	
+\item \textbf{Proccessi software}, attivit\'a coordinate, processi di ciclo di vita per far evolvere il software da uno stato all'altro.
+
+Il software \'e una macchina a stati:
+	\item Concezione
+	\item Sviluppo
+	\item Utilizzo
+	\item Ritiro
+	
+Nella fase di ritiro il software cessa di esistere nel senso che non c'\'e pi\'u alcun tipo di supporto per quel prodotto.
+Le transizioni sono strettamente e formalmente regolate.
+
+
+\item \textbf{Modelli di ciclo di vita}
+
+\item \textbf{Iterazione ed incremento}, iterazione significa che faccio la 
+stessa operazione pi\'u volte , incremento significa aggiungere, \'e additivo. 
+Sono incrementale solo se aggiungo, \'e un obiettivo molto importante da 
+raggiungere (e potenzialmente distruttivo, potrebbe far perdere tempo). Iterare 
+significa riprovare, non ripetere. Non si pu\'o togliere quando si \'e 
+incrementali.
+
+\item \textbf{Prototipo}, serve per imparare, \'e tipicamente usa e getta. Viene diviso in due categorie: quelli rivolti al cliente, per fargli capire un\' esempio di risultato finale, e quelli rivolti verso di noi per aiutarci a trovare una soluzione. Quelli rivolti verso di noi sono un costo, mentre quelli rivolti verso il cliente sono un valore aggiunto. Il primo impatto tra l'utente e il prodotto \'e l'interfaccia. I prototipi possono essere usa e getta" ma costano tempo.
+
+\item \textbf{Riuso}, il software che gi\'a esiste \'e la maggior parte del nostro prodotto. L'informatico deve insegnare a riusare in modo sistematico e non opportunistico(nessun copia incolla). Il riuso \'e cosa saggia se so approvvigionarmi da un fornitore intelligente.
+
+\item La \textbf{manutenzione} richiede gestione della storia, versionamento. 
+Bisogna avere una storia del proprio prodotto. Bisogna spiegare e documentare 
+la scelta ed avere una tecnica che salvi la storia (repository).
+
+\item \textbf{L'efficienza} si vede dove vedo il consumo di risorse. 
+L'efficacia si 
+misura guardando i prodotti e vedendo se sono buoni o cattivi rispetto alla 
+produzione. Un processo \'e un insieme di attivit\'a coordinate e coese (tutti 
+hanno bisogno di tutti).
+
+Standard di riferimento: ISO/IEC 12207.	
+\end{itemize}
+\section{Lezione 3 Processi Software}
+\begin{itemize}
+	\item Il rischio \'e tutto ci\'o che mina le nostre certezze, ci\'o che non 
+	riusciamo a governare. Bisogna convivere con
+	il rischio e mitigarlo, cercare di prevenire il danno.
+	
+	\textbf{Risk mitigation}, ma prima bisogna capire quali sono i rischi.
+	Bisogna affrontarli in modo che siano "addomesticati".
+	
+	
+	\item Un progetto non inizia se non con un'attivit\'a importante che faccia 
+	emergere i requisiti, la maggior parte dei quali sono inespressi. (Gli 
+	stakeholder non hanno la capacit\'a o la pazienza 
+	di scrivere tutto ci\'o di cui hanno
+	bisogno). Un fornitore di un prodotto deve intuire queste necessit\'a. 
+	Questo si fa con analisi ed emersioni predefinite.
+	
+	\item \textbf{Verifica e validazione}, insieme li chiamiamo 
+	\textbf{qualifica} ma sono due cose distinte ed occupano un sacco di
+	tempo. (Consapevolezza di consegnare al customer un prodotto valido. Non 
+	dobbiamo far fare a lui il debug).
+	
+	\'e irragionevole sviluppare software da zero (from scrutch).\'e necessario 
+	puntare sul riuso, e non sul coding la quale \'e un'attivit\'a frazionaria 
+	con un notevole rischio, quindi da evitare.
+	
+	\item \textbf{Un processo} \'e un insieme di attivit\'a complesse. Le 
+	attivit\'a sono suddividibili in parti pi\'u piccole, chiamate
+	task. \'e importante concentrarsi sulla Pianificazione, suddividendo il 
+	tempo.
+	 Quanto pi\'u piccolo \'e il compito da svolgere tanto pi\'u
+	piccolo \'e il rischio. Interesse decisivo \'e spezzare le attivit\'a ad 
+	una grana fine per ridurre i tempi, costi rischi. E' importante capire come 
+	frantumare le attivit\'a.  
+	
+	
+	\item  Un compito lo si assume avendo acquisito consapevolezza degli 
+	strumenti e delle tecniche per portarlo
+	a termine. Bisogna scegliere uno strumento che sia collaborativo.
+	
+	\item Un software non \'e fine a se stesso ma \'e parte di un sistema. Il 
+	sistema lo compongono tutti coloro che sono chiamati a usarlo. 
+	
+	\item \textbf{Organizzazione} \'e un aggregato di persone che 
+	agiscono secondo regole, sono sistematici, disciplinati e
+	quantificabili. 
+	
+	\item Un'impresa certamente funziona a "pipeline". L'organizzazione \'e 
+	divisa in settori, ciascuno con un proprio compito, che sono finalizzati a 
+	un 
+"flusso". Ogni settore risponde alle esigenze di attivit\'a 
+	trasversali. \textbf{Le regole sono i processi}. 
+	
+	\item La conoscenza su come il software funziona deve essere scritta. I 
+	processi vanno documentati.( Norme di progetto, che dicono come un ruolo va 
+	svolto).
+
+	\item I processi, che sono l'organizzazione, hanno bisogno di manutenzione, 
+	non possono durare per sempre.
+	 
+	\item I processi produttivi devono avere un ciclo interno atto a 
+	migliorarli 
+	costantemente. Il ciclo interno di miglioramento \'e indicato con 
+	l'acronimo 
+	PCDA (o principio di Deming). 
+	Questo ciclo \'e fatto di 4 attivit\'a a ciclo:
+	\begin{itemize}
+		\item \textbf{Plan}, non \'e il piano delle attivit\'a di processo, ma 
+		il
+		piano di miglioramento; pianifico ci\'o che produce
+		efficienza ed efficacia;
+		
+		\item \textbf{Do}, stretta attuazione di ci\'o che ho pianificato. Devo 
+		sapere rispetto a cosa migliorare;
+		
+		\item \textbf{Check}, guardo l'esito migliorativo ottenute dalle modi
+		che fatte rispetto al piano;
+		
+		\item \textbf{Act}, ottenuto il risultato porto questo esito a 
+		migliorare il processo. 
+		Porto miglioramenti o, se fallisco, ragiono su come portare 
+		miglioramenti.
+		
+		
+		\item \textbf{Il PDCA serve a migliorare l'efficienza e l'efficacia 
+		attraverso degli obiettivi di miglioramento.}
+		
+		Un ciclo di vita sono gli stati di maturit\'a che ha un software dalla 
+		sua nascita al suo ritiro.
+		
+	\end{itemize}
+
+\section{Lezione 4 Ciclo di vita del software}
+\begin{itemize}
+	\item \textbf{Coclio di vita di un software}, conoscere il ciclo di vita di 
+	un software ci aiuta a capire la software engineering. 
+	
+	
+	
+	\item Il software va inteso in un senso molto pi\'u ampio di "programma", 
+	serve per soddisfare i requisiti dei clienti. il software evolve
+	nel tempo e raggiunge stati tramite transizioni scatenate da attivit\'a che 
+	hanno il fine di far avanzare il software stesso. Si divide in 4 fasi:
+	\begin{itemize}
+	\item \textbf{Concezione}, quando qualcuno pensa che ci sia (o abbia) 
+	bisogno di qualcosa
+	\item \textbf{Sviluppo}
+	\item \textbf{Utilizzo}
+	\item \textbf{Ritiro}
+	
+	Questi stati cambiano attraverso attivit\'a specifiche, derivanti da 
+	processi di cicli di vita.
+	
+	\end{itemize}
+
+	\item \textbf{Fase}, \'e un periodo di tempo contiguo con un inizio ed una 
+	fine. Un prodotto software si spalma sul tempo.
+	
+	Possiamo Immaginare il ciclo di vita su un asse temporale, dove le fasi 
+	sono segmenti tra uno stato e l'altro.
+	
+	\item \textbf{documentazione}. Serve a produrre documenti che evidenziano 
+	lo stato di maturit\'a di un prodotto software. Questo processo va 
+	utilizzato sempre (tranne che nel ritiro).
+	
+	\item E' importante avere un ciclo di vita chiaro in testa, perch\'e averlo 
+	ci fa capire quello che dobbiamo fare e se siamo in grado di farlo. 
+	
+	\item Il compito fondamentale \'e utilizzare un approccio 
+	quantificabile, in modo da poter misurare gli obiettivi e le aspettative. 
+	Cosa devo fare? 
+	Perch\'e? 
+	Sono capace in questo modo di puntare a una qualit\'a misurabile.
+	
+	
+	\item \textbf{Conformit\'a}, un grado di corrispondenza ad aspettative 
+	(efficacia). Misurare quanto soddisfiamo (siamo conformi) alle aspettative.
+	
+	\item \textbf{Maturit\'a}, \'e il grado di stabilit\'a con il quale siamo 
+	in grado di svolgere le attivit\'a. Siamo maturi quando abbiamo acquisito 
+	il "modus operandi".Ossia essere sistematici attraverso un processo di 
+	maturit\'a.
+	
+	\item \textbf{Modello di ciclo}, astrazione del modo nel quale vediamo gli 
+	stati e il loro avanzamento.
+	
+	\item \textbf{Non modello},ad esempio il "code and x", raggiungere la 
+	correttezza "by correction", nel quale le azioni sono eseguite senza 
+	organizzazione preordinata."Non so perch\'e ce l'ho fatta".
+	
+	\item \textbf{I modelli devono essere organizzati}. Si identificano 6 
+	modelli organizzativi:
+	\begin{itemize}
+	\item  \textbf{Modello Waterfall, "a cascata"}. Non \'e ammesso un ritorno 
+	ad una fase gi\'a visitata cos\'i come non \'e possibile risalire una 
+	cascata. Fatto una volta il codice deve essere corretto. 	
+	\textbf{Document driven}, documenti che spiegano la fiducia nelle 
+	scelte. Prima la documentazione poi il software. Senza i documenti
+	non si va avanti, \'e una pre-condizione. La post-condizione \'e avere un 
+	documento approvato. Le fasi sono distinte e non si sovrappongono, tutto 
+	\'e allineato in una linea temporale. Ancora oggi \'e un modello
+	molto utilizzato. La frustrazione pi\'u grande \'e che il codice arriva 
+	tardi. Si programma molto dopo e rispetto alla nostra abitudine \'e 
+	frustrante. Non si realizzano  prototipi, bisogna immaginarseli.
+	Questo si fa solo se tutti gli stakeholder sono d'accordo sulle pre e le 
+	post.Questo modello funziona in un mercato non troppo competitivo, 
+	tipicamente negli appalti pubblici.
+
+
+	\item textbf{Modello "incrementale"}, un modello di tipo incrementale 
+	prevede ritorni. E' difficile in questo modello definire una fase.
+	Fisso un quadro generale, inizio a sviluppare la base, poi torno in ciclo e 
+	aggiungo delle cose. Ogni realizzazione aggiunge un pezzo. Esempio: 
+	sviluppo separato di interfaccia grafica utente e base di dati. Procedendo 
+	a cicli di incremento so esattamente quanti cicli far\'o. 
+	
+	
+	\item \textbf{Modello "Iterativo"},un modello iterativo farebbe un passo 
+	pi\'u indietro. Se non ritorno in analisi il problema \'e completamente 
+	definito e non corro il rischio di buttare via cose. Nel modello 
+	iterativo torno indietro da realizzazione ad analisi (fasi). Si riprova. In 
+	questo modello non so dire con certezza quante iterazioni far\'o.
+	Il modello iterativo lo uso quando gli stakeholder non sanno esattamente 
+	cosa vogliono. Si va per tentativi. E' un modello molto rischioso;
+	
+	
+	\item \textbf{Modello "Evolutivo"},nel modello evolutivo si ragiona su 
+	un'analisi preliminare (schizzo,un'idea non precisa) poi si inizia
+	a fare una versione. Insegue il futuro non ritirando il passato, ho tante 
+	attivit\'a concorrenti. Se le cose
+	che voglio fare non le so all'inizio una nuova versione "asfalta" molto del 
+	passato. Si fa su un prodotto che ha la capacit\'a di assorbire molte 
+	versioni sul mercato (esempio i browser). Questo modello lo attua chi pu\'o 
+	sostenere molte versioni in parallelo (e quindi ha buone 
+	capacit\'a finanziarie);
+	
+	
+	\item \textbf{Modello "spirale"}, il problema \'e il rischio non studiato. 
+	Bisogna usare un modello fortemente consapevole dei rischi. A partire 
+	dall'inizio ci sono molti cicli ripartiti per capire meglio i rischi e solo
+	dopo la spirale si apre. Per riuscire a trovare una via di uscita si 
+	utilizzano i prototipi. Servono a capire se il rischio si pu\'o risolvere, 
+	confermandoo se ci\'o che si \'e fatto \'e ragionevole. Questo modello 
+	aspira a togliere i rischi; ha avuto molto uso in ambienti risk driven, in 
+	progetti di carattere "sistema";
+	
+	
+	\item \textbf{Modello "componenti"}, nasce sull'osservazione che molto di 
+	quello che ci serve esiste gi\'a. Pensare che rifare da capo sia molto 
+	probabilmente fallimentare. Ragionare per riuso. Componenti riusabili.
+	La progettazione confronta il problema con le realt\'a esistenti. Adattare 
+	i requisiti alle disponibilit\'a. 
+	Si negozia con lo stakeholder. Adatto i requisiti al panorama delle 
+	possibilit\'a e poi progetto riusando le possibilit\'a. La creativit\'a sta 
+	nell'integrare e nell'usare bene ci\'o che esiste gi\'a. Richiede per\'o di 
+	studiare il dominio.
+	
+	
+	\item \textbf{Metodi agili}, opposizione al modello sequenziale. 4 principi 
+	su cui si basa:
+	\begin{itemize}
+	\item Mettere in primo piano persone e iterazioni piuttosto che processi e 
+	strumenti. Gli individui sono importanti ed \'e importante il modo in cui 
+	interagiscono tra loro
+	
+	\item "Dei documenti me ne frego, basta che funzioni". La documentazione 
+	non sempre corrisponde a software funzionante. E' importante che funzioni. 
+	Ma nel lungo periodo far\'a soffrire chi dovr\'a prendere in mano il 
+	software
+	
+	\item Avere un buon rapporto con il customer, coinvolgerlo, non ingessare 
+	il rapporto
+	
+	\item Reattivit\'a piuttosto che pianificazione. Capacit\'a di adattamento 
+	a cambiamenti delle situazioni.
+	Il modello agile \'e maturato in qualcosa di plausibile, in alcune tecniche 
+	che funzionano.
+	
+	
+	Modello agile educato, tutto ruota intorno al "document user story", e 
+	l'espressione precisa di quello
+	che l'utente vuole in quel momento. Associato ad ogni user story produrre 
+	una strategia che sia in grado di soddisfare quei bisogni. User story 
+	associato a un insieme di cose da fare che dimostrino al customer
+	che c\'e una soluzione (product backlog). Quello che si ottiene va verso il 
+	customer o in feedback. C\'e un supervisore che decide l'urgenza strategica 
+	(sprint). Tutti fanno un pezzo e poi lo consegnano. Ogni iterazione \'e 
+	rapida e va molto verso le aspettative del cliente.
+	Scrum daily, mucchio giornaliero, un contatto giornaliero dell'avanzamento. 
+	Tecnica ragionevole per chi ha poca esperienza.
+	\end{itemize}
+\end{itemize}	
+
+\end{itemize}
+
+
+\end{itemize}
+\end{document}
