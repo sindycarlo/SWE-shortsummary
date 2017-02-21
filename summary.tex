@@ -1,5 +1,6 @@
 \documentclass[10pt]{article}
 \usepackage{hyperref}
+\usepackage{comment}
 \usepackage{graphicx}
 \usepackage[font=small,labelfont=bf]{caption}
 \title{Summary-SWE}
@@ -727,9 +728,121 @@ lavora meglio.
 
 \end{itemize}
 
+\section{Lezione 6 Gestione di progetto}
+\begin{itemize}
+
+\item \textbf{Gestione qualit\'a} la possiamo guardare da due punti di vista: 
+qualit\'a sul prodotto e qualit\'a su ci\'o che si fa (qualit\'a di processo). 
+E' una competenza strategica, una funzione aziendale e non un ruolo di progetto.
+Serve come indicatore che stiamo lavorando bene". 
+
+
+\item \textbf{Pianificazione di progetto} serve a sapere cosa dobbiamo fare 
+nell'assicurarci che le nostre attivit\'a producano esiti che aiutino la nostra 
+collaborazione; regolare l'avanzamento. 
+Cominciamo ad identificare cosa "c\'e da fare", pianifichiamo le attivit\'a.
+
+Chi lo pu\'o fare? 
+Quanto mi costa? 
+
+\item Le attivit\'a hanno un flusso, hanno un inizio ed un'uscita. Si 
+distendono su un asse temporale.
+
+\item Capite le attivit\'a mi devo chiedere quali ruoli assegnare. Attivit\'a 
+che hanno dei vincoli sugli estremi ed eventualmente in mezzo. Devo capire 
+quanto mi servir\'a per svolgere un'attivit\'a ad esempio: data,
+tempo, persone, denaro.
+
+\item Le ore vanno intese come ore di calendario: 
+tempo/persona, quanto tempo uso tali persone sapendo che ciascuna percepisce un 
+costo orario preciso. In base a questo posso capire quanto mi coster\'a un 
+progetto.
+
+\item \textbf{Strumenti per la pianificazione}:
+\begin{itemize}
+
+\item \textbf{Diagrammi di Gantt} strumento intellettuale semplice per mettere 
+in relazione attivit\'a. 
+
+Prima cosa da fare: 
+
+\item determino le attivit\'a da svolgere su tutta la durata o su periodi 
+pi\'u piccoli. L'orizzonte \'e dato in parte dal modello di ciclo di vita che 
+adotto.
+
+\item determinare le dipendenze, che consumano tempo e non producono. 
+
+\item dire quanto tempo e persone mi serviranno per una certa attivita;
+
+
+\item Una volta decise le risorse, alloco persone alle attivit\'a. Poi mettiamo 
+a diagramma le cose e vediamo se tornano, altrimenti si torna indietro (ciclo). 
+
+\item Il diagramma descrive, sull'asse orizzontale il tempo segmentato per
+unit\'a di lavoro (es. 1gg, una settimana, un mese..). Una buona scelta \'e 
+utilizzare come unit\'a di misura un giorno (8 ore lavorative); 
+
+Sull'asse verticale, ci sono tutte le attivit\'a che devo svolgere e archi che 
+rappresentano le transizioni tra una e l'altra.
 
 
 
+\item \textbf{PERT} (Program Evaluation and Review Technique), serve a 
+calcolare il rischio di calendario che consiste nell'avere un realistico 
+margine tra un input e un output (slack). Se misuro lo slack e mi accorgo che 
+\'e 0 o negativo ho una criticit\'a.. Non si pu\'o avere nemmeno
+slack troppo grande(slack=differenza tra due date). Diagrammi specifici 
+collocano gli slack e rappresentano il rischio. Il diagramma di Pert indica 
+inoltre l'ordine delle attivit\'a e la loro durata e indica la prima data in 
+cui posso iniziare un'attivit\'a che abbia tutti gli input necessari. 
+Calcolando il cammino pi\'u lungo tra l'inizio e la fine  del progetto 
+posso calcolare l'attivit\'a che finisce prima. Questo diagramma legge il Gantt 
+rispetto allo slack e calcola i 
+cammini critici.
 
+
+
+\begin{comment}
+\item \textbf{Work Breakdown Structure}, strumento per capire 
+quali sono le attivit\'a utili/fondamentali tramite decomposizione (struttura 
+di decomposizione del lavoro). L'attivit\'a viene scomposta e numerata con 
+numerazione gerarchica. Ogni componente deve essere univocamente identificabile.
+Un'attivit0a decomposta permette di agevolare il parallelismo. Il WBS 
+serve ad avere una percezione
+delle attivita ni (foglie) da svolgere. Allocazione delle risorse: assegnare 
+attivita a ruoli e poi ruoli a persone
+per far si che ogni persona sia impegnata per tutto il tempo disponibile. 
+Diagramma di Gantt ribaltato sulle
+persone (al posto delle attivita); l'intento e sapere che sto usando le 
+persone in parallelo ed entro il limite
+dato. La decisione delle ore di investimento per la formazione personale e a 
+discrezione di ciascuno. La
+componente informatica moderna e basata sull'apprendimento di tecnologie 
+nuove. Fattori di inuenza:
+- Dimensione del progetto -> quante righe di codice mi servono; nel nostro 
+progetto stara tra 5000-10000
+righe, nello stage circa 2000 (si intende righe produttive). La dimensione si 
+riesce a stimare macroscopica-
+1
+mente; sta tra due assi: quanto codice e quanto complesso.
+- Esperienza del dominio -> quanta e l'esperienza di chi svolge il progetto 
+nei confronti del dominio a cui
+siamo davanti.
+- Tecnologie adottate -> inuenza molto forte, e una scelta strategica di 
+amministrazione.
+- Ambiente di sviluppo -> procedure e tecniche con le quali collaboriamo, 
+dobbiamo collocale a basso
+costo temporale.
+- Qualita di richiesta.
+Problematiche di stima
+Legge di Parkinson -> il lavoro si espande no a riempire il tempo disponibile.
+Legge della domanda -> quanto piu e basso il prezzo di una cosa tanto piu 
+grande sara la domanda per quella
+cosa l. Uso in abbondanza le cose che costano poco.
+
+\end{comment}
+
+\end{itemize}
+\end{itemize}
 \end{itemize}
 \end{document}
