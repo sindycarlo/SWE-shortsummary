@@ -1017,11 +1017,106 @@ con l'aggiunta di quelle riusate da altri progetti (ad esempio le librerie).
 				\end{itemize}
 		\end{itemize}
 	
+	\item \textbf{Configurazione},unione di parti distinte unite secondo regole 
+	rigorose.
 	
+	\item Spesso nei team c\'e una persona che si occupa della configurazione. 
+	In un progetto, tipicamente, l'albero della base
+	di dati \'e molto complesso, nel nostro progetto \'e molto pi\'u semplice 
+	in realt\'a.
+	Elementi di configurazione (CI, configuration items). 
+	La configurazione \'e fatta di nodi che evolvono, perch\'e ciascun 
+	nodo ha una storia ed essa viene modificata. Prima ho la configurazione 
+	(system breakdown, decomposizione del 
+	sistema). 
+	Alcuni nodi costituiscono un raggruppamento che 
+	descrive un preciso stato del sistema (baseline) che rappresenta il "punto 
+	di copertura" di uno stadio da 
+	parte di un team. Avere un numero non fisso di baseline, serve a darmi 
+	certezza di progresso. 
+	\textbf{Una baseline \'e una raccolta di CI, ciascuna con la sua storia}. 
+	Ho 
+	bisogno di uno strumento che mi dica da quali CI \'e costituita una 
+	baseline. 
+	Conseguentemente, una baseline va documentata. Esiste
+	dunque un'attivit'a aggiuntiva che si chiama \textbf{controllo di 
+	configurazione}. 
+	Questa attivit\'a \'e molto delicata
+	perch\'e mi dice lo stato di avanzamento del prodotto. La modifica \'e un 
+	atto 
+	che deve essere formalmente
+	approvato, perch\'e \'e un processo sui cui vogliamo iterare. Occorre 
+	introdurre un sistema rigido di gestione
+	delle modifiche che vengano fatte a fronte di una richiesta. Si cambia la 
+	baseline cambiando una o pi\'u CI
+	che cambiano la loro versione. Chi vuole cambiare deve avere un motivo per 
+	cui valga la pena, quindi serve
+	un documento che va ad un'autorit\'a delegata, per capire se il cambiamento 
+	\'e accettabile o no (autorit\'a che
+	si chiama "gruppo di decisione", Change Management Board, CMB). Questo 
+	gruppo valuta se il cambiamento \'e accettabile e lancia un ticket per il 
+	cambiamento. Chi fa queste 
+	azioni reimmette nel sistema il dato
+	modificato. Fare un cambiamento produce un 
+    flusso di lavoro, e quindi 
+	comporta un costo. Normalmente il
+	responsabile di progetto \'e parte di questo gruppo. La configurazione 
+	evolve	attraverso il change management.
 	
+	\item \textbf{Versionamento}:  deve essere automatizzato. Si appoggia su 
+	una repository, che \'e un servizio aggiornato alla
+	best practice. Devo usare un sistema di versionamento gi\'a esistente e 
+	moderno, supportato dalla tecnologia
+	"cloud" (es. Git). Voglio che il versionamento e la con\'gurazione siano 
+	legati insieme. Le modifiche le faccio
+	sullo spazio locale e poi le reimmetto nella repository quando sono 
+	convinto che quello che ho fatto \'e di qualità,
+	facendo un update. Deve essere funzionante in modo robusto al modo 
+	concorrente (data race). Questa cosa
+	si risolve in due modi:
 	
+	\begin{itemize}
+	\item Locking: procedura che assicura un invariante, che su un singolo CI 
+	lavori in ogni istante al pi\'u una persona.
+	\end{itemize}
 
-
+	\item \textbf{Strumenti di lavoro}: molto aldil\'a del semplice editor di 
+	programmi e compilatore.
+	
+	\item \textbf{Norme di Progetto}: Procedure di progetti, le attivit\'a sono 
+	sistematiche, disciplinate e 
+	quantificabili. Ci\'o che d\'a disciplina
+	alle attivit\'a sono le norme sancite. Sono le regole che ci diamo,
+	Le norme sono l'essenza, salvaguardano la collaborazione. In un gruppo di 
+	lavoro mi devo affidare ad un
+	modello rigido che si chiama appunto norme. Si distingue in due categorie:
+	\begin{itemize}	
+		\item Obbligatorie;
+		\item Raccomandazioni.
+\end{itemize}
+	Una regola non si discute, una raccomandazione \'e invece opinabile. Le 
+	norme vanno scritte in un documento.
+	Un documento che il gruppo dovr\'a chiamare  "Norme di progetto", un 
+	insieme di regole a cui il gruppo deve aderire. E' il fattore umano che 
+	rende le regole diffcili e permeabili. 
+	Costruire questo documento comporta un
+	costo e una fatica iniziale, ma porta a miglioramenti. Le regole sono 
+	buone se sono facilmente applicabili
+	e non vanno lasciate a discrezione degli esseri umani.
+	
+	
+	\item Un esempio di norma \'e quella di codifica,
+	 ci sono alcune pratiche di buonsenso per evitare errori:
+	\begin{itemize}
+		\item Nomi di tipi, di variabili e funzioni devono essere espressivi e 
+		distinguere di cosa stiamo parlando (es.
+		norme Javadoc);
+		\item  strutturazione in moduli, directory... Il codice va
+		frantumato in parti piccole, che consentano di rispettare un vincolo di 
+		linee di codice;
+		\item Regolazione rispetto a come uso un linguaggio. Il programmatore 
+		non pu\'o prendersi la libert\'a di utilizzare come vuole un linguaggio.
+	\end{itemize}
 
 \end{itemize}
 \end{document}
